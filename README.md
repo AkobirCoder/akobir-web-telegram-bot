@@ -14,4 +14,26 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
 # akobir-web-telegram-bot
+
+<table align="center">
+  <tr>
+    <td>
+      <img
+        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/telegram/telegram-original.svg"
+        alt="Telegram Bot"
+        width="160"
+        height="160"
+        style="border-radius: 50%; background:#0d1117; padding:20px;"
+      />
+    </td>
+    <td style="padding-left: 20px; vertical-align: middle;">
+      <h2>Telegram Web Bot</h2>
+      <p>
+        Interactive Telegram bot with integrated Web App.<br/>
+        Telegram Bot API • Web App • JavaScript • Secure Communication
+      </p>
+    </td>
+  </tr>
+</table>

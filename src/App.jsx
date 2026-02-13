@@ -8,7 +8,7 @@ const App = () => {
 
     return (
         <>
-            <h1>Akobir's courses</h1>
+            <h1 className='heading'>Akobir's courses</h1>
             <div className='cards__container'>
                 {
                     courses.map((course) => {

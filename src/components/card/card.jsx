@@ -18,13 +18,13 @@ const CourseCard = ({title, price, Image}) => {
                         currency: "USD"
                     })}
                 </div>
+            </div>
 
-                <div className='hr'></div>
+            <div className='hr'></div>
 
-                <div className='btn__container'>
-                    <button>+</button>
-                    <button>-</button>
-                </div>
+            <div className='btn__container'>
+                <button>+</button>
+                <button>-</button>
             </div>
         </div>
     );

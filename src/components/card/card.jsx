@@ -2,7 +2,7 @@ import React from 'react';
 import './card.css';
 import { Button } from '../index';
 
-const CourseCard = ({title, price, Image}) => {
+const CourseCard = ({title, price, Image, course, onAddItems, onRemoveItems}) => {
     return (
         <div className='card'>
             <span className='card__badge'>1</span>
@@ -24,8 +24,16 @@ const CourseCard = ({title, price, Image}) => {
             <div className='hr'></div>
 
             <div className='btn__container'>
-                <Button title={'+'} type={'add'} />
-                <Button title={'-'} type={'remove'} />
+                <Button 
+                    title={'+'} 
+                    type={'add'} 
+                    onClick={() => onAddItems(course)} 
+                />
+                <Button 
+                    title={'-'} 
+                    type={'remove'} 
+                    onClick={() => onRemoveItems(course)}
+                />
             </div>
         </div>
     );

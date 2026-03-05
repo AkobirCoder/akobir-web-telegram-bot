@@ -8,7 +8,7 @@ const App = () => {
 
     const [cartItems, setCartItems] = useState([]);
 
-    const onAddItems = (item) => {
+    const onAddItem = (item) => {
         const existItem = cartItems.find((cartItem) => {
             return cartItem.id === item.id;
         });
@@ -34,7 +34,7 @@ const App = () => {
         }
     }
 
-    const onRemoveItems = (item) => {
+    const onRemoveItem = (item) => {
         const existItem = cartItems.find((cartItem) => {
             return cartItem.id === item.id;
         });
@@ -65,7 +65,7 @@ const App = () => {
     return (
         <>
             <h1 className='heading'>Akobir kurslar</h1>
-            <Cart />
+            <Cart cartItems={cartItems} />
             <div className='cards__container'>
                 {
                     courses.map((course) => {
@@ -74,8 +74,8 @@ const App = () => {
                                 key={course.id}
                                 {...course}
                                 course={course}
-                                onAddItems={onAddItems}
-                                onRemoveItems={onRemoveItems}
+                                onAddItem={onAddItem}
+                                onRemoveItem={onRemoveItem}
                             />
                         );
                     })

@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './card.css';
 import { Button } from '../index';
 
-const CourseCard = ({title, price, Image, course, onAddItems, onRemoveItems}) => {
+const CourseCard = ({title, price, Image, course, onAddItem, onRemoveItem}) => {
+    const [count, setCount] = useState(0);
+
+    const handleIncrement = () => {
+        setCount((prevState) => {
+            return prevState + 1;
+        });
+
+        onAddItem(course);
+    }
+
+    const handleDecrement = () => {
+        setCount((prevState) => {
+            return prevState - 1;
+        });
+
+        onRemoveItem(course);
+    }
+
     return (
         <div className='card'>
-            <span className='card__badge'>1</span>
+            <span className={`${count !== 0 ? 'card__badge' : 'card__badge-hidden'}`}>
+                {count}
+            </span>
 
             <div className='image__container'>
                 <img src={Image} alt={title} width={'100%'} height={230} />
@@ -27,13 +47,17 @@ const CourseCard = ({title, price, Image, course, onAddItems, onRemoveItems}) =>
                 <Button 
                     title={'+'} 
                     type={'add'} 
-                    onClick={() => onAddItems(course)} 
+                    onClick={handleIncrement}
                 />
-                <Button 
-                    title={'-'} 
-                    type={'remove'} 
-                    onClick={() => onRemoveItems(course)}
-                />
+                {
+                    count !== 0 && (
+                        <Button 
+                            title={'-'} 
+                            type={'remove'} 
+                            onClick={handleDecrement}
+                        />
+                    )
+                }
             </div>
         </div>
     );

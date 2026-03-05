@@ -81,7 +81,7 @@ const App = () => {
     }, [cartItems]);
 
     const onSendData = useCallback(() => {
-        const queryId = telegram.initDataUnsave?.query_id;
+        const queryId = telegram.initDataUnsafe?.query_id;
 
         if (queryId) {
             fetch('http://localhost:8000/web-data', {

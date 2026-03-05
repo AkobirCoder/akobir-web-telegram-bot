@@ -5,7 +5,6 @@
 .btn {
     padding: 1rem 0.8rem;
     font-size: 25px;
-    font-weight: bold;
     text-align: center;
     border: none;
     outline: none;
@@ -53,4 +52,8 @@
 
 .btn.checkout:active {
     background-color: rgb(30, 93, 41);
+}
+
+.btn.disabled {
+    opacity: 0.5;
 }

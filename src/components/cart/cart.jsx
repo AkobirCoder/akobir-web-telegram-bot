@@ -20,7 +20,7 @@ const Cart = ({cartItems, onCheckout}) => {
                 onClick={() => {
                     if (cartItems.length === 0) return;
 
-                    onCheckout;
+                    onCheckout();
                 }}
                 disable={cartItems.length === 0 ? true : false}
             />

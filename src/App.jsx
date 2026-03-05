@@ -74,6 +74,12 @@ const App = () => {
         telegram.MainButton.show();
     }
 
+    useEffect(() => {
+        if (cartItems.length === 0) {
+            telegram.MainButton.hide();
+        }
+    }, [cartItems]);
+
     return (
         <>
             <h1 className='heading'>Akobir kurslar</h1>

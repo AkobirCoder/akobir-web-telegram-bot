@@ -83,13 +83,15 @@ const App = () => {
     const onSendData = useCallback(() => {
         const queryId = telegram.initDataUnsafe?.query_id;
 
+        const chatId = telegram.initDataUnsafe?.user.id;
+
         if (queryId) {
             fetch('https://akobir-web-telegram-bot-d86113a6ecd0.herokuapp.com/web-data', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({products: cartItems, queryId: queryId}),
+                body: JSON.stringify({products: cartItems, queryId: queryId, chatId: chatId}),
             });
         } else {
             telegram.sendData(JSON.stringify(cartItems));

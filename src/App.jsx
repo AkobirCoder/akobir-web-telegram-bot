@@ -84,7 +84,7 @@ const App = () => {
         const queryId = telegram.initDataUnsafe?.query_id;
 
         if (queryId) {
-            fetch('https://akobir-web-telegram-bot-d86113a6ecd0.herokuapp.com//web-data', {
+            fetch('https://akobir-web-telegram-bot-d86113a6ecd0.herokuapp.com/web-data', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
